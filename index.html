@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Xadrez do Leo</title>
+    <link rel="shortcut icon" href="/peças/cavalo_preto.png" type="image/x-icon"> 
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+    <div class="tabuleiro">
+        <div class="indicador_numeros">
+            <p>8</p>
+            <p>7</p>
+            <p>6</p>
+            <p>5</p>
+            <p>4</p>
+            <p>3</p>
+            <p>2</p>
+            <p>1</p>
+        </div>
+        <div class="casas">
+            <div class="fileira">
+                <div class="casa_branca" id="a8"></div>
+                <div class="casa_preta" id="b8"></div>
+                <div class="casa_branca" id="c8"></div>
+                <div class="casa_preta" id="d8"></div>
+                <div class="casa_branca" id="e8"></div>
+                <div class="casa_preta" id="f8"></div>
+                <div class="casa_branca" id="g8"></div>
+                <div class="casa_preta" id="h8"></div>
+            </div>
+
+            <div class="fileira">
+                <div class="casa_preta" id="a7"></div>
+                <div class="casa_branca" id="b7"></div>
+                <div class="casa_preta" id="c7"></div>
+                <div class="casa_branca" id="d7"></div>
+                <div class="casa_preta" id="e7"></div>
+                <div class="casa_branca" id="f7"></div>
+                <div class="casa_preta" id="g7"></div>
+                <div class="casa_branca" id="h7"></div>
+            </div>
+            
+            <div class="fileira">
+                <div class="casa_branca" id="a6"></div>
+                <div class="casa_preta" id="b6"></div>
+                <div class="casa_branca" id="c6"></div>
+                <div class="casa_preta" id="d6"></div>
+                <div class="casa_branca" id="e6"></div>
+                <div class="casa_preta" id="f6"></div>
+                <div class="casa_branca" id="g6"></div>
+                <div class="casa_preta" id="h6"></div>
+            </div>
+
+            <div class="fileira">
+                <div class="casa_preta" id="a5"></div>
+                <div class="casa_branca" id="b5"></div>
+                <div class="casa_preta" id="c5"></div>
+                <div class="casa_branca" id="d5"></div>
+                <div class="casa_preta" id="e5"></div>
+                <div class="casa_branca" id="f5"></div>
+                <div class="casa_preta" id="g5"></div>
+                <div class="casa_branca" id="h5"></div>
+            </div>
+
+            <div class="fileira">
+                <div class="casa_branca" id="a4"></div>
+                <div class="casa_preta" id="b4"></div>
+                <div class="casa_branca" id="c4"></div>
+                <div class="casa_preta" id="d4"></div>
+                <div class="casa_branca" id="e4"></div>
+                <div class="casa_preta" id="f4"></div>
+                <div class="casa_branca" id="g4"></div>
+                <div class="casa_preta" id="h4"></div>
+            </div>
+
+            <div class="fileira">
+                <div class="casa_preta" id="a3"></div>
+                <div class="casa_branca" id="b3"></div>
+                <div class="casa_preta" id="c3"></div>
+                <div class="casa_branca" id="d3"></div>
+                <div class="casa_preta" id="e3"></div>
+                <div class="casa_branca" id="f3"></div>
+                <div class="casa_preta" id="g3"></div>
+                <div class="casa_branca" id="h3"></div>
+            </div>
+
+            <div class="fileira">
+                <div class="casa_branca" id="a2"></div>
+                <div class="casa_preta" id="b2"></div>
+                <div class="casa_branca" id="c2"></div>
+                <div class="casa_preta" id="d2"></div>
+                <div class="casa_branca" id="e2"></div>
+                <div class="casa_preta" id="f2"></div>
+                <div class="casa_branca" id="g2"></div>
+                <div class="casa_preta" id="h2"></div>
+            </div>
+
+            <div class="fileira">
+                <div class="casa_preta" id="a1"></div>
+                <div class="casa_branca" id="b1"></div>
+                <div class="casa_preta" id="c1"></div>
+                <div class="casa_branca" id="d1"></div>
+                <div class="casa_preta" id="e1"></div>
+                <div class="casa_branca" id="f1"></div>
+                <div class="casa_preta" id="g1"></div>
+                <div class="casa_branca" id="h1"></div>
+            </div>
+
+            <div class="indicador_letras">
+                <p>a</p>
+                <p>b</p>
+                <p>c</p>
+                <p>d</p>
+                <p>e</p>
+                <p>f</p>
+                <p>g</p>
+                <p>h</p>
+            </div>
+        </div>
+    </div>
+
+
+    <div>
+        <div class="fileira">
+            <div class="peca" id="torre_p_1">
+                <button class="jogadas frente_7" id="btn_torre_p_1_andar7"></button>
+                <button class="jogadas frente_6" id="btn_torre_p_1_andar6"></button>
+                <button class="jogadas frente_5" id="btn_torre_p_1_andar5"></button>
+                <button class="jogadas frente_4" id="btn_torre_p_1_andar4"></button>
+                <button class="jogadas frente_3" id="btn_torre_p_1_andar3"></button>
+                <button class="jogadas frente_2" id="btn_torre_p_1_andar2"></button>
+                <button class="jogadas frente_1" id="btn_torre_p_1_andar1"></button>
+
+                <button class="jogadas tras_7" id="btn_torre_p_1_andar_tras7"></button>
+                <button class="jogadas tras_6" id="btn_torre_p_1_andar_tras6"></button>
+                <button class="jogadas tras_5" id="btn_torre_p_1_andar_tras5"></button>
+                <button class="jogadas tras_4" id="btn_torre_p_1_andar_tras4"></button>
+                <button class="jogadas tras_3" id="btn_torre_p_1_andar_tras3"></button>
+                <button class="jogadas tras_2" id="btn_torre_p_1_andar_tras2"></button>
+                <button class="jogadas tras_1" id="btn_torre_p_1_andar_tras1"></button>
+
+                <button class="jogadas lado_7" id="btn_torre_p_1_andar_lado7"></button>
+                <button class="jogadas lado_6" id="btn_torre_p_1_andar_lado6"></button>
+                <button class="jogadas lado_5" id="btn_torre_p_1_andar_lado5"></button>
+                <button class="jogadas lado_4" id="btn_torre_p_1_andar_lado4"></button>
+                <button class="jogadas lado_3" id="btn_torre_p_1_andar_lado3"></button>
+                <button class="jogadas lado_2" id="btn_torre_p_1_andar_lado2"></button>
+                <button class="jogadas lado_1" id="btn_torre_p_1_andar_lado1"></button>
+
+                <button class="jogadas lado_esquerdo_7" id="btn_torre_p_1_andar_lado_esquerdo7"></button>
+                <button class="jogadas lado_esquerdo_6" id="btn_torre_p_1_andar_lado_esquerdo6"></button>
+                <button class="jogadas lado_esquerdo_5" id="btn_torre_p_1_andar_lado_esquerdo5"></button>
+                <button class="jogadas lado_esquerdo_4" id="btn_torre_p_1_andar_lado_esquerdo4"></button>
+                <button class="jogadas lado_esquerdo_3" id="btn_torre_p_1_andar_lado_esquerdo3"></button>
+                <button class="jogadas lado_esquerdo_2" id="btn_torre_p_1_andar_lado_esquerdo2"></button>
+                <button class="jogadas lado_esquerdo_1" id="btn_torre_p_1_andar_lado_esquerdo1"></button>
+                <button class="btn_peca" id="btn_torre_p_1"></button><img src="/peças/torre_preta.png">
+            </div>
+            <div class="peca" id="cavalo_p_1">
+                <button class="jogadas l_8" id="btn_cavalo_p_1_andar8"></button>
+                <button class="jogadas l_7" id="btn_cavalo_p_1_andar7"></button>
+                <button class="jogadas l_6" id="btn_cavalo_p_1_andar6"></button>
+                <button class="jogadas l_5" id="btn_cavalo_p_1_andar5"></button>
+                <button class="jogadas l_4" id="btn_cavalo_p_1_andar4"></button>
+                <button class="jogadas l_3" id="btn_cavalo_p_1_andar3"></button>
+                <button class="jogadas l_2" id="btn_cavalo_p_1_andar2"></button>
+                <button class="jogadas l_1" id="btn_cavalo_p_1_andar1"></button>
+                <button class="btn_peca" id="btn_cavalo_p_1"><img src="/peças/cavalo_preto.png"></button>
+            </div>
+            <div class="peca" id="bispo_p_1">
+                <button class="jogadas diagonal_cima_direita7" id="btn_bispo_p_1_diagonal_cima_direita7"></button>
+                <button class="jogadas diagonal_cima_direita6" id="btn_bispo_p_1_diagonal_cima_direita6"></button>
+                <button class="jogadas diagonal_cima_direita5" id="btn_bispo_p_1_diagonal_cima_direita5"></button>
+                <button class="jogadas diagonal_cima_direita4" id="btn_bispo_p_1_diagonal_cima_direita4"></button>
+                <button class="jogadas diagonal_cima_direita3" id="btn_bispo_p_1_diagonal_cima_direita3"></button>
+                <button class="jogadas diagonal_cima_direita2" id="btn_bispo_p_1_diagonal_cima_direita2"></button>
+                <button class="jogadas diagonal_cima_direita1" id="btn_bispo_p_1_diagonal_cima_direita1"></button>
+               
+                <button class="jogadas diagonal_cima_esquerda7" id="btn_bispo_p_1_diagonal_cima_esquerda7"></button>
+                <button class="jogadas diagonal_cima_esquerda6" id="btn_bispo_p_1_diagonal_cima_esquerda6"></button>
+                <button class="jogadas diagonal_cima_esquerda5" id="btn_bispo_p_1_diagonal_cima_esquerda5"></button>
+                <button class="jogadas diagonal_cima_esquerda4" id="btn_bispo_p_1_diagonal_cima_esquerda4"></button>
+                <button class="jogadas diagonal_cima_esquerda3" id="btn_bispo_p_1_diagonal_cima_esquerda3"></button>
+                <button class="jogadas diagonal_cima_esquerda2" id="btn_bispo_p_1_diagonal_cima_esquerda2"></button>
+                <button class="jogadas diagonal_cima_esquerda1" id="btn_bispo_p_1_diagonal_cima_esquerda1"></button>
+
+                <button class="jogadas diagonal_baixo_direita7" id="btn_bispo_p_1_diagonal_baixo_direita7"></button>
+                <button class="jogadas diagonal_baixo_direita6" id="btn_bispo_p_1_diagonal_baixo_direita6"></button>
+                <button class="jogadas diagonal_baixo_direita5" id="btn_bispo_p_1_diagonal_baixo_direita5"></button>
+                <button class="jogadas diagonal_baixo_direita4" id="btn_bispo_p_1_diagonal_baixo_direita4"></button>
+                <button class="jogadas diagonal_baixo_direita3" id="btn_bispo_p_1_diagonal_baixo_direita3"></button>
+                <button class="jogadas diagonal_baixo_direita2" id="btn_bispo_p_1_diagonal_baixo_direita2"></button>
+                <button class="jogadas diagonal_baixo_direita1" id="btn_bispo_p_1_diagonal_baixo_direita1"></button>
+               
+                <button class="jogadas diagonal_baixo_esquerda7" id="btn_bispo_p_1_diagonal_baixo_esquerda7"></button>
+                <button class="jogadas diagonal_baixo_esquerda6" id="btn_bispo_p_1_diagonal_baixo_esquerda6"></button>
+                <button class="jogadas diagonal_baixo_esquerda5" id="btn_bispo_p_1_diagonal_baixo_esquerda5"></button>
+                <button class="jogadas diagonal_baixo_esquerda4" id="btn_bispo_p_1_diagonal_baixo_esquerda4"></button>
+                <button class="jogadas diagonal_baixo_esquerda3" id="btn_bispo_p_1_diagonal_baixo_esquerda3"></button>
+                <button class="jogadas diagonal_baixo_esquerda2" id="btn_bispo_p_1_diagonal_baixo_esquerda2"></button>
+                <button class="jogadas diagonal_baixo_esquerda1" id="btn_bispo_p_1_diagonal_baixo_esquerda1"></button>
+                <button class="btn_peca" id="btn_bispo_p_1"><img src="/peças/bispo_preto.png"></button>
+            </div>
+            <div class="peca" id="rainha_p">
+                <button class="jogadas diagonal_cima_direita7" id="btn_rainha_p_1_diagonal_cima_direita7"></button>
+                <button class="jogadas diagonal_cima_direita6" id="btn_rainha_p_1_diagonal_cima_direita6"></button>
+                <button class="jogadas diagonal_cima_direita5" id="btn_rainha_p_1_diagonal_cima_direita5"></button>
+                <button class="jogadas diagonal_cima_direita4" id="btn_rainha_p_1_diagonal_cima_direita4"></button>
+                <button class="jogadas diagonal_cima_direita3" id="btn_rainha_p_1_diagonal_cima_direita3"></button>
+                <button class="jogadas diagonal_cima_direita2" id="btn_rainha_p_1_diagonal_cima_direita2"></button>
+                <button class="jogadas diagonal_cima_direita1" id="btn_rainha_p_1_diagonal_cima_direita1"></button>
+               
+                <button class="jogadas diagonal_cima_esquerda7" id="btn_rainha_p_1_diagonal_cima_esquerda7"></button>
+                <button class="jogadas diagonal_cima_esquerda6" id="btn_rainha_p_1_diagonal_cima_esquerda6"></button>
+                <button class="jogadas diagonal_cima_esquerda5" id="btn_rainha_p_1_diagonal_cima_esquerda5"></button>
+                <button class="jogadas diagonal_cima_esquerda4" id="btn_rainha_p_1_diagonal_cima_esquerda4"></button>
+                <button class="jogadas diagonal_cima_esquerda3" id="btn_rainha_p_1_diagonal_cima_esquerda3"></button>
+                <button class="jogadas diagonal_cima_esquerda2" id="btn_rainha_p_1_diagonal_cima_esquerda2"></button>
+                <button class="jogadas diagonal_cima_esquerda1" id="btn_rainha_p_1_diagonal_cima_esquerda1"></button>
+
+                <button class="jogadas diagonal_baixo_direita7" id="btn_rainha_p_1_diagonal_baixo_direita7"></button>
+                <button class="jogadas diagonal_baixo_direita6" id="btn_rainha_p_1_diagonal_baixo_direita6"></button>
+                <button class="jogadas diagonal_baixo_direita5" id="btn_rainha_p_1_diagonal_baixo_direita5"></button>
+                <button class="jogadas diagonal_baixo_direita4" id="btn_rainha_p_1_diagonal_baixo_direita4"></button>
+                <button class="jogadas diagonal_baixo_direita3" id="btn_rainha_p_1_diagonal_baixo_direita3"></button>
+                <button class="jogadas diagonal_baixo_direita2" id="btn_rainha_p_1_diagonal_baixo_direita2"></button>
+                <button class="jogadas diagonal_baixo_direita1" id="btn_rainha_p_1_diagonal_baixo_direita1"></button>
+               
+                <button class="jogadas diagonal_baixo_esquerda7" id="btn_rainha_p_1_diagonal_baixo_esquerda7"></button>
+                <button class="jogadas diagonal_baixo_esquerda6" id="btn_rainha_p_1_diagonal_baixo_esquerda6"></button>
+                <button class="jogadas diagonal_baixo_esquerda5" id="btn_rainha_p_1_diagonal_baixo_esquerda5"></button>
+                <button class="jogadas diagonal_baixo_esquerda4" id="btn_rainha_p_1_diagonal_baixo_esquerda4"></button>
+                <button class="jogadas diagonal_baixo_esquerda3" id="btn_rainha_p_1_diagonal_baixo_esquerda3"></button>
+                <button class="jogadas diagonal_baixo_esquerda2" id="btn_rainha_p_1_diagonal_baixo_esquerda2"></button>
+                <button class="jogadas diagonal_baixo_esquerda1" id="btn_rainha_p_1_diagonal_baixo_esquerda1"></button>
+
+                <button class="jogadas frente_7" id="btn_rainha_p_1_andar7"></button>
+                <button class="jogadas frente_6" id="btn_rainha_p_1_andar6"></button>
+                <button class="jogadas frente_5" id="btn_rainha_p_1_andar5"></button>
+                <button class="jogadas frente_4" id="btn_rainha_p_1_andar4"></button>
+                <button class="jogadas frente_3" id="btn_rainha_p_1_andar3"></button>
+                <button class="jogadas frente_2" id="btn_rainha_p_1_andar2"></button>
+                <button class="jogadas frente_1" id="btn_rainha_p_1_andar1"></button>
+
+                <button class="jogadas tras_7" id="btn_rainha_p_1_andar_tras7"></button>
+                <button class="jogadas tras_6" id="btn_rainha_p_1_andar_tras6"></button>
+                <button class="jogadas tras_5" id="btn_rainha_p_1_andar_tras5"></button>
+                <button class="jogadas tras_4" id="btn_rainha_p_1_andar_tras4"></button>
+                <button class="jogadas tras_3" id="btn_rainha_p_1_andar_tras3"></button>
+                <button class="jogadas tras_2" id="btn_rainha_p_1_andar_tras2"></button>
+                <button class="jogadas tras_1" id="btn_rainha_p_1_andar_tras1"></button>
+
+                <button class="jogadas lado_7" id="btn_rainha_p_1_andar_lado7"></button>
+                <button class="jogadas lado_6" id="btn_rainha_p_1_andar_lado6"></button>
+                <button class="jogadas lado_5" id="btn_rainha_p_1_andar_lado5"></button>
+                <button class="jogadas lado_4" id="btn_rainha_p_1_andar_lado4"></button>
+                <button class="jogadas lado_3" id="btn_rainha_p_1_andar_lado3"></button>
+                <button class="jogadas lado_2" id="btn_rainha_p_1_andar_lado2"></button>
+                <button class="jogadas lado_1" id="btn_rainha_p_1_andar_lado1"></button>
+
+                <button class="jogadas lado_esquerdo_7" id="btn_rainha_p_1_andar_lado_esquerdo7"></button>
+                <button class="jogadas lado_esquerdo_6" id="btn_rainha_p_1_andar_lado_esquerdo6"></button>
+                <button class="jogadas lado_esquerdo_5" id="btn_rainha_p_1_andar_lado_esquerdo5"></button>
+                <button class="jogadas lado_esquerdo_4" id="btn_rainha_p_1_andar_lado_esquerdo4"></button>
+                <button class="jogadas lado_esquerdo_3" id="btn_rainha_p_1_andar_lado_esquerdo3"></button>
+                <button class="jogadas lado_esquerdo_2" id="btn_rainha_p_1_andar_lado_esquerdo2"></button>
+                <button class="jogadas lado_esquerdo_1" id="btn_rainha_p_1_andar_lado_esquerdo1"></button>
+                <button class="btn_peca" id="btn_rainha_p"><img src="/peças/rainha_preta.png"></button>
+            </div>
+            <div class="peca" id="rei_p">
+                <button class="jogadas frente_1" id="btn_rei_p_1_andar8"></button>
+                <button class="jogadas diagonal_cima_direita1" id="btn_rei_p_1_andar7"></button>
+                <button class="jogadas lado_1" id="btn_rei_p_1_andar6"></button>
+                <button class="jogadas diagonal_baixo_direita1" id="btn_rei_p_1_andar5"></button>
+                <button class="jogadas tras_1" id="btn_rei_p_1_andar4"></button>
+                <button class="jogadas diagonal_baixo_esquerda1" id="btn_rei_p_1_andar3"></button>
+                <button class="jogadas lado_esquerdo_1" id="btn_rei_p_1_andar2"></button>
+                <button class="jogadas diagonal_cima_esquerda1" id="btn_rei_p_1_andar1"></button>
+                <button class="btn_peca" id="btn_rei_p"><img src="/peças/rei_preto.png"></button>
+            </div>
+            <div class="peca" id="bispo_p_2">
+                <button class="jogadas diagonal_cima_direita7" id="btn_bispo_p_2_diagonal_cima_direita7"></button>
+                <button class="jogadas diagonal_cima_direita6" id="btn_bispo_p_2_diagonal_cima_direita6"></button>
+                <button class="jogadas diagonal_cima_direita5" id="btn_bispo_p_2_diagonal_cima_direita5"></button>
+                <button class="jogadas diagonal_cima_direita4" id="btn_bispo_p_2_diagonal_cima_direita4"></button>
+                <button class="jogadas diagonal_cima_direita3" id="btn_bispo_p_2_diagonal_cima_direita3"></button>
+                <button class="jogadas diagonal_cima_direita2" id="btn_bispo_p_2_diagonal_cima_direita2"></button>
+                <button class="jogadas diagonal_cima_direita1" id="btn_bispo_p_2_diagonal_cima_direita1"></button>
+               
+                <button class="jogadas diagonal_cima_esquerda7" id="btn_bispo_p_2_diagonal_cima_esquerda7"></button>
+                <button class="jogadas diagonal_cima_esquerda6" id="btn_bispo_p_2_diagonal_cima_esquerda6"></button>
+                <button class="jogadas diagonal_cima_esquerda5" id="btn_bispo_p_2_diagonal_cima_esquerda5"></button>
+                <button class="jogadas diagonal_cima_esquerda4" id="btn_bispo_p_2_diagonal_cima_esquerda4"></button>
+                <button class="jogadas diagonal_cima_esquerda3" id="btn_bispo_p_2_diagonal_cima_esquerda3"></button>
+                <button class="jogadas diagonal_cima_esquerda2" id="btn_bispo_p_2_diagonal_cima_esquerda2"></button>
+                <button class="jogadas diagonal_cima_esquerda1" id="btn_bispo_p_2_diagonal_cima_esquerda1"></button>
+
+                <button class="jogadas diagonal_baixo_direita7" id="btn_bispo_p_2_diagonal_baixo_direita7"></button>
+                <button class="jogadas diagonal_baixo_direita6" id="btn_bispo_p_2_diagonal_baixo_direita6"></button>
+                <button class="jogadas diagonal_baixo_direita5" id="btn_bispo_p_2_diagonal_baixo_direita5"></button>
+                <button class="jogadas diagonal_baixo_direita4" id="btn_bispo_p_2_diagonal_baixo_direita4"></button>
+                <button class="jogadas diagonal_baixo_direita3" id="btn_bispo_p_2_diagonal_baixo_direita3"></button>
+                <button class="jogadas diagonal_baixo_direita2" id="btn_bispo_p_2_diagonal_baixo_direita2"></button>
+                <button class="jogadas diagonal_baixo_direita1" id="btn_bispo_p_2_diagonal_baixo_direita1"></button>
+               
+                <button class="jogadas diagonal_baixo_esquerda7" id="btn_bispo_p_2_diagonal_baixo_esquerda7"></button>
+                <button class="jogadas diagonal_baixo_esquerda6" id="btn_bispo_p_2_diagonal_baixo_esquerda6"></button>
+                <button class="jogadas diagonal_baixo_esquerda5" id="btn_bispo_p_2_diagonal_baixo_esquerda5"></button>
+                <button class="jogadas diagonal_baixo_esquerda4" id="btn_bispo_p_2_diagonal_baixo_esquerda4"></button>
+                <button class="jogadas diagonal_baixo_esquerda3" id="btn_bispo_p_2_diagonal_baixo_esquerda3"></button>
+                <button class="jogadas diagonal_baixo_esquerda2" id="btn_bispo_p_2_diagonal_baixo_esquerda2"></button>
+                <button class="jogadas diagonal_baixo_esquerda1" id="btn_bispo_p_2_diagonal_baixo_esquerda1"></button>
+                <button class="btn_peca" id="btn_bispo_p_2"><img src="/peças/bispo_preto.png" id="peao_preto"></button>
+            </div>
+            <div class="peca" id="cavalo_p_2">
+                <button class="jogadas l_8" id="btn_cavalo_p_2_andar8"></button>
+                <button class="jogadas l_7" id="btn_cavalo_p_2_andar7"></button>
+                <button class="jogadas l_6" id="btn_cavalo_p_2_andar6"></button>
+                <button class="jogadas l_5" id="btn_cavalo_p_2_andar5"></button>
+                <button class="jogadas l_4" id="btn_cavalo_p_2_andar4"></button>
+                <button class="jogadas l_3" id="btn_cavalo_p_2_andar3"></button>
+                <button class="jogadas l_2" id="btn_cavalo_p_2_andar2"></button>
+                <button class="jogadas l_1" id="btn_cavalo_p_2_andar1"></button>
+                <button class="btn_peca" id="btn_cavalo_p_2"><img src="/peças/cavalo_preto.png"></button>
+            </div>
+            <div class="peca" id="torre_p_2">
+                <button class="jogadas frente_7" id="btn_torre_p_2_andar7"></button>
+                <button class="jogadas frente_6" id="btn_torre_p_2_andar6"></button>
+                <button class="jogadas frente_5" id="btn_torre_p_2_andar5"></button>
+                <button class="jogadas frente_4" id="btn_torre_p_2_andar4"></button>
+                <button class="jogadas frente_3" id="btn_torre_p_2_andar3"></button>
+                <button class="jogadas frente_2" id="btn_torre_p_2_andar2"></button>
+                <button class="jogadas frente_1" id="btn_torre_p_2_andar1"></button>
+
+                <button class="jogadas tras_7" id="btn_torre_p_2_andar_tras7"></button>
+                <button class="jogadas tras_6" id="btn_torre_p_2_andar_tras6"></button>
+                <button class="jogadas tras_5" id="btn_torre_p_2_andar_tras5"></button>
+                <button class="jogadas tras_4" id="btn_torre_p_2_andar_tras4"></button>
+                <button class="jogadas tras_3" id="btn_torre_p_2_andar_tras3"></button>
+                <button class="jogadas tras_2" id="btn_torre_p_2_andar_tras2"></button>
+                <button class="jogadas tras_1" id="btn_torre_p_2_andar_tras1"></button>
+
+                <button class="jogadas lado_7" id="btn_torre_p_2_andar_lado7"></button>
+                <button class="jogadas lado_6" id="btn_torre_p_2_andar_lado6"></button>
+                <button class="jogadas lado_5" id="btn_torre_p_2_andar_lado5"></button>
+                <button class="jogadas lado_4" id="btn_torre_p_2_andar_lado4"></button>
+                <button class="jogadas lado_3" id="btn_torre_p_2_andar_lado3"></button>
+                <button class="jogadas lado_2" id="btn_torre_p_2_andar_lado2"></button>
+                <button class="jogadas lado_1" id="btn_torre_p_2_andar_lado1"></button>
+
+                <button class="jogadas lado_esquerdo_7" id="btn_torre_p_2_andar_lado_esquerdo7"></button>
+                <button class="jogadas lado_esquerdo_6" id="btn_torre_p_2_andar_lado_esquerdo6"></button>
+                <button class="jogadas lado_esquerdo_5" id="btn_torre_p_2_andar_lado_esquerdo5"></button>
+                <button class="jogadas lado_esquerdo_4" id="btn_torre_p_2_andar_lado_esquerdo4"></button>
+                <button class="jogadas lado_esquerdo_3" id="btn_torre_p_2_andar_lado_esquerdo3"></button>
+                <button class="jogadas lado_esquerdo_2" id="btn_torre_p_2_andar_lado_esquerdo2"></button>
+                <button class="jogadas lado_esquerdo_1" id="btn_torre_p_2_andar_lado_esquerdo1"></button>
+                <button class="btn_peca" id="btn_torre_p_2"><img src="/peças/torre_preta.png"></button>
+            </div>
+        </div>
+
+        <div class="fileira">
+            <div class="peca" id="peao_p_1">
+                <button class="jogadas diagonal_baixo_esquerda1 comer" id="btn_peao_p_1_diagonal_baixo_esquerda1"></button>
+                <button class="jogadas diagonal_baixo_direita1 comer" id="btn_peao_p_1_diagonal_baixo_direita1"></button>
+
+                <button class="jogadas tras_2" id="btn_peao_p_1_andar2"></button>
+                <button class="jogadas tras_1" id="btn_peao_p_1_andar1"></button>
+                <div class="btn_peca" id="btn_peao_p_1"><img src="/peças/peão_preto.png"></div>
+            </div>
+            <div class="peca" id="peao_p_2">
+                <button class="jogadas diagonal_baixo_esquerda1 comer" id="btn_peao_p_2_diagonal_baixo_esquerda1"></button>
+                <button class="jogadas diagonal_baixo_direita1 comer" id="btn_peao_p_2_diagonal_baixo_direita1"></button>
+
+                <button class="jogadas tras_2" id="btn_peao_p_2_andar2"></button>
+                <button class="jogadas tras_1" id="btn_peao_p_2_andar1"></button>
+                <div class="btn_peca" id="btn_peao_p_2"><img src="/peças/peão_preto.png"></div>
+            </div>
+            <div class="peca" id="peao_p_3">
+                <button class="jogadas diagonal_baixo_esquerda1 comer" id="btn_peao_p_2_diagonal_baixo_esquerda1"></button>
+                <button class="jogadas diagonal_baixo_direita1 comer" id="btn_peao_p_2_diagonal_baixo_direita1"></button>
+
+                <button class="jogadas tras_2" id="btn_peao_p_3_andar2"></button>
+                <button class="jogadas tras_1" id="btn_peao_p_3_andar1"></button>
+                <div class="btn_peca" id="btn_peao_p_3"><img src="/peças/peão_preto.png"></div>
+            </div>
+            <div class="peca" id="peao_p_4">
+                <button class="jogadas diagonal_baixo_esquerda1 comer" id="btn_peao_p_2_diagonal_baixo_esquerda1"></button>
+                <button class="jogadas diagonal_baixo_direita1 comer" id="btn_peao_p_2_diagonal_baixo_direita1"></button>
+
+                <button class="jogadas tras_2" id="btn_peao_p_4_andar2"></button>
+                <button class="jogadas tras_1" id="btn_peao_p_4_andar1"></button>
+                <div class="btn_peca" id="btn_peao_p_4"><img src="/peças/peão_preto.png"></div>
+            </div>
+            <div class="peca" id="peao_p_5">
+                <button class="jogadas diagonal_baixo_esquerda1 comer" id="btn_peao_p_2_diagonal_baixo_esquerda1"></button>
+                <button class="jogadas diagonal_baixo_direita1 comer" id="btn_peao_p_2_diagonal_baixo_direita1"></button>
+
+                <button class="jogadas tras_2" id="btn_peao_p_5_andar2"></button>
+                <button class="jogadas tras_1" id="btn_peao_p_5_andar1"></button>
+                <div class="btn_peca" id="btn_peao_p_5"><img src="/peças/peão_preto.png"></div>
+            </div>
+            <div class="peca" id="peao_p_6">
+                <button class="jogadas diagonal_baixo_esquerda1 comer" id="btn_peao_p_2_diagonal_baixo_esquerda1"></button>
+                <button class="jogadas diagonal_baixo_direita1 comer" id="btn_peao_p_2_diagonal_baixo_direita1"></button>
+
+                <button class="jogadas tras_2" id="btn_peao_p_6_andar2"></button>
+                <button class="jogadas tras_1" id="btn_peao_p_6_andar1"></button>
+                <div class="btn_peca" id="btn_peao_p_6"><img src="/peças/peão_preto.png"></div>
+            </div>
+            <div class="peca" id="peao_p_7">
+                <button class="jogadas diagonal_baixo_esquerda1 comer" id="btn_peao_p_2_diagonal_baixo_esquerda1"></button>
+                <button class="jogadas diagonal_baixo_direita1 comer" id="btn_peao_p_2_diagonal_baixo_direita1"></button>
+
+                <button class="jogadas tras_2" id="btn_peao_p_7_andar2"></button>
+                <button class="jogadas tras_1" id="btn_peao_p_7_andar1"></button>
+                <div class="btn_peca" id="btn_peao_p_7"><img src="/peças/peão_preto.png"></div>
+            </div>
+            <div class="peca" id="peao_p_8">
+                <button class="jogadas diagonal_baixo_esquerda1 comer" id="btn_peao_p_2_diagonal_baixo_esquerda1"></button>
+                <button class="jogadas diagonal_baixo_direita1 comer" id="btn_peao_p_2_diagonal_baixo_direita1"></button>
+
+                <button class="jogadas tras_2" id="btn_peao_p_8_andar2"></button>
+                <button class="jogadas tras_1" id="btn_peao_p_8_andar1"></button>
+                <div class="btn_peca" id="btn_peao_p_8"><img src="/peças/peão_preto.png"></div>
+            </div>
+        </div>
+        
+    </div>
+        <div >
+        <div class="fileira">
+            <div class="peca" id="peao_b_1">
+                <button class="jogadas diagonal_cima_esquerda1 comer" id="btn_peao_b_1_diagonal_cima_esquerda1"></button>
+                <button class="jogadas diagonal_cima_direita1 comer" id="btn_peao_b_1_diagonal_cima_direita1"></button>
+
+                <button class="jogadas frente_2" id="btn_peao_b_1_andar2"></button>
+                <button class="jogadas frente_1" id="btn_peao_b_1_andar1"></button>
+                <div class="btn_peca" id="btn_peao_b_1"><img src="/peças/peão_branco.png"></div>
+            </div>
+            <div class="peca" id="peao_b_2">
+                <button class="jogadas diagonal_cima_esquerda1 comer" id="btn_peao_b_2_diagonal_cima_esquerda1"></button>
+                <button class="jogadas diagonal_cima_direita1 comer" id="btn_peao_b_2_diagonal_cima_direita1"></button>
+
+                <button class="jogadas frente_2" id="btn_peao_b_2_andar2"></button>
+                <button class="jogadas frente_1" id="btn_peao_b_2_andar1"></button>
+                <div class="btn_peca" id="btn_peao_b_2"><img src="/peças/peão_branco.png"></div>
+            </div>
+            <div class="peca" id="peao_b_3">
+                <button class="jogadas diagonal_cima_esquerda1 comer" id="btn_peao_b_3_diagonal_cima_esquerda1"></button>
+                <button class="jogadas diagonal_cima_direita1 comer" id="btn_peao_b_3_diagonal_cima_direita1"></button>
+
+                <button class="jogadas frente_2" id="btn_peao_b_3_andar2"></button>
+                <button class="jogadas frente_1" id="btn_peao_b_3_andar1"></button>
+                <button class="btn_peca" id="btn_peao_b_3"><img src="/peças/peão_branco.png"></button>
+            </div>
+            <div class="peca" id="peao_b_4">
+                <button class="jogadas diagonal_cima_esquerda1 comer" id="btn_peao_b_4_diagonal_cima_esquerda1"></button>
+                <button class="jogadas diagonal_cima_direita1 comer" id="btn_peao_b_4_diagonal_cima_direita1"></button>
+
+                <button class="jogadas frente_2" id="btn_peao_b_4_andar2"></button>
+                <button class="jogadas frente_1" id="btn_peao_b_4_andar1"></button>
+                <button class="btn_peca" id="btn_peao_b_4"><img src="/peças/peão_branco.png"></button>
+            </div>
+            <div class="peca" id="peao_b_5">
+                <button class="jogadas diagonal_cima_esquerda1 comer" id="btn_peao_b_5_diagonal_cima_esquerda1"></button>
+                <button class="jogadas diagonal_cima_direita1 comer" id="btn_peao_b_5_diagonal_cima_direita1"></button>
+                
+                <button class="jogadas frente_2" id="btn_peao_b_5_andar2"></button>
+                <button class="jogadas frente_1" id="btn_peao_b_5_andar1"></button>
+                <button class="btn_peca" id="btn_peao_b_5"><img src="/peças/peão_branco.png"></button>
+            </div>
+            <div class="peca" id="peao_b_6">
+                <button class="jogadas diagonal_cima_esquerda1 comer" id="btn_peao_b_6_diagonal_cima_esquerda1"></button>
+                <button class="jogadas diagonal_cima_direita1 comer" id="btn_peao_b_6_diagonal_cima_direita1"></button>
+
+                <button class="jogadas frente_2" id="btn_peao_b_6_andar2"></button>
+                <button class="jogadas frente_1" id="btn_peao_b_6_andar1"></button>
+                <button class="btn_peca" id="btn_peao_b_6"><img src="/peças/peão_branco.png"></button>
+            </div>
+            <div class="peca" id="peao_b_7">
+                <button class="jogadas diagonal_cima_esquerda1 comer" id="btn_peao_b_7_diagonal_cima_esquerda1"></button>
+                <button class="jogadas diagonal_cima_direita1 comer" id="btn_peao_b_7_diagonal_cima_direita1"></button>
+
+                <button class="jogadas frente_2" id="btn_peao_b_7_andar2"></button>
+                <button class="jogadas frente_1" id="btn_peao_b_7_andar1"></button>
+                <button class="btn_peca" id="btn_peao_b_7"><img src="/peças/peão_branco.png"></button>
+            </div>
+            <div class="peca" id="peao_b_8">
+                <button class="jogadas diagonal_cima_esquerda1 comer" id="btn_peao_b_8_diagonal_cima_esquerda1"></button>
+                <button class="jogadas diagonal_cima_direita1 comer" id="btn_peao_b_8_diagonal_cima_direita1"></button>
+
+                <button class="jogadas frente_2" id="btn_peao_b_8_andar2"></button>
+                <button class="jogadas frente_1" id="btn_peao_b_8_andar1"></button>
+                <button class="btn_peca" id="btn_peao_b_8"><img src="/peças/peão_branco.png"></button>
+            </div>
+        </div>
+        <div class="fileira">
+            <div class="peca" id="torre_b_1">
+                <button class="jogadas frente_7" id="btn_torre_b_1_andar7"></button>
+                <button class="jogadas frente_6" id="btn_torre_b_1_andar6"></button>
+                <button class="jogadas frente_5" id="btn_torre_b_1_andar5"></button>
+                <button class="jogadas frente_4" id="btn_torre_b_1_andar4"></button>
+                <button class="jogadas frente_3" id="btn_torre_b_1_andar3"></button>
+                <button class="jogadas frente_2" id="btn_torre_b_1_andar2"></button>
+                <button class="jogadas frente_1" id="btn_torre_b_1_andar1"></button>
+
+                <button class="jogadas tras_7" id="btn_torre_b_1_andar_tras7"></button>
+                <button class="jogadas tras_6" id="btn_torre_b_1_andar_tras6"></button>
+                <button class="jogadas tras_5" id="btn_torre_b_1_andar_tras5"></button>
+                <button class="jogadas tras_4" id="btn_torre_b_1_andar_tras4"></button>
+                <button class="jogadas tras_3" id="btn_torre_b_1_andar_tras3"></button>
+                <button class="jogadas tras_2" id="btn_torre_b_1_andar_tras2"></button>
+                <button class="jogadas tras_1" id="btn_torre_b_1_andar_tras1"></button>
+
+                <button class="jogadas lado_7" id="btn_torre_b_1_andar_lado7"></button>
+                <button class="jogadas lado_6" id="btn_torre_b_1_andar_lado6"></button>
+                <button class="jogadas lado_5" id="btn_torre_b_1_andar_lado5"></button>
+                <button class="jogadas lado_4" id="btn_torre_b_1_andar_lado4"></button>
+                <button class="jogadas lado_3" id="btn_torre_b_1_andar_lado3"></button>
+                <button class="jogadas lado_2" id="btn_torre_b_1_andar_lado2"></button>
+                <button class="jogadas lado_1" id="btn_torre_b_1_andar_lado1"></button>
+
+                <button class="jogadas lado_esquerdo_7" id="btn_torre_b_1_andar_lado_esquerdo7"></button>
+                <button class="jogadas lado_esquerdo_6" id="btn_torre_b_1_andar_lado_esquerdo6"></button>
+                <button class="jogadas lado_esquerdo_5" id="btn_torre_b_1_andar_lado_esquerdo5"></button>
+                <button class="jogadas lado_esquerdo_4" id="btn_torre_b_1_andar_lado_esquerdo4"></button>
+                <button class="jogadas lado_esquerdo_3" id="btn_torre_b_1_andar_lado_esquerdo3"></button>
+                <button class="jogadas lado_esquerdo_2" id="btn_torre_b_1_andar_lado_esquerdo2"></button>
+                <button class="jogadas lado_esquerdo_1" id="btn_torre_b_1_andar_lado_esquerdo1"></button>
+                <button class="btn_peca" id="btn_torre_b_1"><img src="/peças/torre_branca.png"></button>
+                
+            </div>
+            <div class="peca" id="cavalo_b_1">
+                <button class="jogadas l_8" id="btn_cavalo_b_1_andar8"></button>
+                <button class="jogadas l_7" id="btn_cavalo_b_1_andar7"></button>
+                <button class="jogadas l_6" id="btn_cavalo_b_1_andar6"></button>
+                <button class="jogadas l_5" id="btn_cavalo_b_1_andar5"></button>
+                <button class="jogadas l_4" id="btn_cavalo_b_1_andar4"></button>
+                <button class="jogadas l_3" id="btn_cavalo_b_1_andar3"></button>
+                <button class="jogadas l_2" id="btn_cavalo_b_1_andar2"></button>
+                <button class="jogadas l_1" id="btn_cavalo_b_1_andar1"></button>
+                <button class="btn_peca" id="btn_cavalo_b_1"><img src="/peças/cavalo_branco.png"></button>
+            </div>
+            <div class="peca" id="bispo_b_1">
+                <button class="jogadas diagonal_cima_direita7" id="btn_bispo_b_1_diagonal_cima_direita7"></button>
+                <button class="jogadas diagonal_cima_direita6" id="btn_bispo_b_1_diagonal_cima_direita6"></button>
+                <button class="jogadas diagonal_cima_direita5" id="btn_bispo_b_1_diagonal_cima_direita5"></button>
+                <button class="jogadas diagonal_cima_direita4" id="btn_bispo_b_1_diagonal_cima_direita4"></button>
+                <button class="jogadas diagonal_cima_direita3" id="btn_bispo_b_1_diagonal_cima_direita3"></button>
+                <button class="jogadas diagonal_cima_direita2" id="btn_bispo_b_1_diagonal_cima_direita2"></button>
+                <button class="jogadas diagonal_cima_direita1" id="btn_bispo_b_1_diagonal_cima_direita1"></button>
+               
+                <button class="jogadas diagonal_cima_esquerda7" id="btn_bispo_b_1_diagonal_cima_esquerda7"></button>
+                <button class="jogadas diagonal_cima_esquerda6" id="btn_bispo_b_1_diagonal_cima_esquerda6"></button>
+                <button class="jogadas diagonal_cima_esquerda5" id="btn_bispo_b_1_diagonal_cima_esquerda5"></button>
+                <button class="jogadas diagonal_cima_esquerda4" id="btn_bispo_b_1_diagonal_cima_esquerda4"></button>
+                <button class="jogadas diagonal_cima_esquerda3" id="btn_bispo_b_1_diagonal_cima_esquerda3"></button>
+                <button class="jogadas diagonal_cima_esquerda2" id="btn_bispo_b_1_diagonal_cima_esquerda2"></button>
+                <button class="jogadas diagonal_cima_esquerda1" id="btn_bispo_b_1_diagonal_cima_esquerda1"></button>
+
+                <button class="jogadas diagonal_baixo_direita7" id="btn_bispo_b_1_diagonal_baixo_direita7"></button>
+                <button class="jogadas diagonal_baixo_direita6" id="btn_bispo_b_1_diagonal_baixo_direita6"></button>
+                <button class="jogadas diagonal_baixo_direita5" id="btn_bispo_b_1_diagonal_baixo_direita5"></button>
+                <button class="jogadas diagonal_baixo_direita4" id="btn_bispo_b_1_diagonal_baixo_direita4"></button>
+                <button class="jogadas diagonal_baixo_direita3" id="btn_bispo_b_1_diagonal_baixo_direita3"></button>
+                <button class="jogadas diagonal_baixo_direita2" id="btn_bispo_b_1_diagonal_baixo_direita2"></button>
+                <button class="jogadas diagonal_baixo_direita1" id="btn_bispo_b_1_diagonal_baixo_direita1"></button>
+               
+                <button class="jogadas diagonal_baixo_esquerda7" id="btn_bispo_b_1_diagonal_baixo_esquerda7"></button>
+                <button class="jogadas diagonal_baixo_esquerda6" id="btn_bispo_b_1_diagonal_baixo_esquerda6"></button>
+                <button class="jogadas diagonal_baixo_esquerda5" id="btn_bispo_b_1_diagonal_baixo_esquerda5"></button>
+                <button class="jogadas diagonal_baixo_esquerda4" id="btn_bispo_b_1_diagonal_baixo_esquerda4"></button>
+                <button class="jogadas diagonal_baixo_esquerda3" id="btn_bispo_b_1_diagonal_baixo_esquerda3"></button>
+                <button class="jogadas diagonal_baixo_esquerda2" id="btn_bispo_b_1_diagonal_baixo_esquerda2"></button>
+                <button class="jogadas diagonal_baixo_esquerda1" id="btn_bispo_b_1_diagonal_baixo_esquerda1"></button>
+
+                <button class="btn_peca" id="btn_bispo_b_1"><img src="/peças/bispo_branco.png"></button>
+            </div>
+            <div class="peca" id="rainha_b">
+                <button class="jogadas diagonal_cima_direita7" id="btn_rainha_b_1_diagonal_cima_direita7"></button>
+                <button class="jogadas diagonal_cima_direita6" id="btn_rainha_b_1_diagonal_cima_direita6"></button>
+                <button class="jogadas diagonal_cima_direita5" id="btn_rainha_b_1_diagonal_cima_direita5"></button>
+                <button class="jogadas diagonal_cima_direita4" id="btn_rainha_b_1_diagonal_cima_direita4"></button>
+                <button class="jogadas diagonal_cima_direita3" id="btn_rainha_b_1_diagonal_cima_direita3"></button>
+                <button class="jogadas diagonal_cima_direita2" id="btn_rainha_b_1_diagonal_cima_direita2"></button>
+                <button class="jogadas diagonal_cima_direita1" id="btn_rainha_b_1_diagonal_cima_direita1"></button>
+               
+                <button class="jogadas diagonal_cima_esquerda7" id="btn_rainha_b_1_diagonal_cima_esquerda7"></button>
+                <button class="jogadas diagonal_cima_esquerda6" id="btn_rainha_b_1_diagonal_cima_esquerda6"></button>
+                <button class="jogadas diagonal_cima_esquerda5" id="btn_rainha_b_1_diagonal_cima_esquerda5"></button>
+                <button class="jogadas diagonal_cima_esquerda4" id="btn_rainha_b_1_diagonal_cima_esquerda4"></button>
+                <button class="jogadas diagonal_cima_esquerda3" id="btn_rainha_b_1_diagonal_cima_esquerda3"></button>
+                <button class="jogadas diagonal_cima_esquerda2" id="btn_rainha_b_1_diagonal_cima_esquerda2"></button>
+                <button class="jogadas diagonal_cima_esquerda1" id="btn_rainha_b_1_diagonal_cima_esquerda1"></button>
+
+                <button class="jogadas diagonal_baixo_direita7" id="btn_rainha_b_1_diagonal_baixo_direita7"></button>
+                <button class="jogadas diagonal_baixo_direita6" id="btn_rainha_b_1_diagonal_baixo_direita6"></button>
+                <button class="jogadas diagonal_baixo_direita5" id="btn_rainha_b_1_diagonal_baixo_direita5"></button>
+                <button class="jogadas diagonal_baixo_direita4" id="btn_rainha_b_1_diagonal_baixo_direita4"></button>
+                <button class="jogadas diagonal_baixo_direita3" id="btn_rainha_b_1_diagonal_baixo_direita3"></button>
+                <button class="jogadas diagonal_baixo_direita2" id="btn_rainha_b_1_diagonal_baixo_direita2"></button>
+                <button class="jogadas diagonal_baixo_direita1" id="btn_rainha_b_1_diagonal_baixo_direita1"></button>
+               
+                <button class="jogadas diagonal_baixo_esquerda7" id="btn_rainha_b_1_diagonal_baixo_esquerda7"></button>
+                <button class="jogadas diagonal_baixo_esquerda6" id="btn_rainha_b_1_diagonal_baixo_esquerda6"></button>
+                <button class="jogadas diagonal_baixo_esquerda5" id="btn_rainha_b_1_diagonal_baixo_esquerda5"></button>
+                <button class="jogadas diagonal_baixo_esquerda4" id="btn_rainha_b_1_diagonal_baixo_esquerda4"></button>
+                <button class="jogadas diagonal_baixo_esquerda3" id="btn_rainha_b_1_diagonal_baixo_esquerda3"></button>
+                <button class="jogadas diagonal_baixo_esquerda2" id="btn_rainha_b_1_diagonal_baixo_esquerda2"></button>
+                <button class="jogadas diagonal_baixo_esquerda1" id="btn_rainha_b_1_diagonal_baixo_esquerda1"></button>
+
+                <button class="jogadas frente_7" id="btn_rainha_b_1_andar7"></button>
+                <button class="jogadas frente_6" id="btn_rainha_b_1_andar6"></button>
+                <button class="jogadas frente_5" id="btn_rainha_b_1_andar5"></button>
+                <button class="jogadas frente_4" id="btn_rainha_b_1_andar4"></button>
+                <button class="jogadas frente_3" id="btn_rainha_b_1_andar3"></button>
+                <button class="jogadas frente_2" id="btn_rainha_b_1_andar2"></button>
+                <button class="jogadas frente_1" id="btn_rainha_b_1_andar1"></button>
+
+                <button class="jogadas tras_7" id="btn_rainha_b_1_andar_tras7"></button>
+                <button class="jogadas tras_6" id="btn_rainha_b_1_andar_tras6"></button>
+                <button class="jogadas tras_5" id="btn_rainha_b_1_andar_tras5"></button>
+                <button class="jogadas tras_4" id="btn_rainha_b_1_andar_tras4"></button>
+                <button class="jogadas tras_3" id="btn_rainha_b_1_andar_tras3"></button>
+                <button class="jogadas tras_2" id="btn_rainha_b_1_andar_tras2"></button>
+                <button class="jogadas tras_1" id="btn_rainha_b_1_andar_tras1"></button>
+
+                <button class="jogadas lado_7" id="btn_rainha_b_1_andar_lado7"></button>
+                <button class="jogadas lado_6" id="btn_rainha_b_1_andar_lado6"></button>
+                <button class="jogadas lado_5" id="btn_rainha_b_1_andar_lado5"></button>
+                <button class="jogadas lado_4" id="btn_rainha_b_1_andar_lado4"></button>
+                <button class="jogadas lado_3" id="btn_rainha_b_1_andar_lado3"></button>
+                <button class="jogadas lado_2" id="btn_rainha_b_1_andar_lado2"></button>
+                <button class="jogadas lado_1" id="btn_rainha_b_1_andar_lado1"></button>
+
+                <button class="jogadas lado_esquerdo_7" id="btn_rainha_b_1_andar_lado_esquerdo7"></button>
+                <button class="jogadas lado_esquerdo_6" id="btn_rainha_b_1_andar_lado_esquerdo6"></button>
+                <button class="jogadas lado_esquerdo_5" id="btn_rainha_b_1_andar_lado_esquerdo5"></button>
+                <button class="jogadas lado_esquerdo_4" id="btn_rainha_b_1_andar_lado_esquerdo4"></button>
+                <button class="jogadas lado_esquerdo_3" id="btn_rainha_b_1_andar_lado_esquerdo3"></button>
+                <button class="jogadas lado_esquerdo_2" id="btn_rainha_b_1_andar_lado_esquerdo2"></button>
+                <button class="jogadas lado_esquerdo_1" id="btn_rainha_b_1_andar_lado_esquerdo1"></button>
+                <button class="btn_peca" id="btn_rainha_b"><img src="/peças/rainha_branca.png"></button>
+            </div>
+            <div class="peca" id="rei_b">
+                <button class="jogadas frente_1" id="btn_rei_b_1_andar8"></button>
+                <button class="jogadas diagonal_cima_direita1" id="btn_rei_b_1_andar7"></button>
+                <button class="jogadas lado_1" id="btn_rei_b_1_andar6"></button>
+                <button class="jogadas diagonal_baixo_direita1" id="btn_rei_b_1_andar5"></button>
+                <button class="jogadas tras_1" id="btn_rei_b_1_andar4"></button>
+                <button class="jogadas diagonal_baixo_esquerda1" id="btn_rei_b_1_andar3"></button>
+                <button class="jogadas lado_esquerdo_1" id="btn_rei_b_1_andar2"></button>
+                <button class="jogadas diagonal_cima_esquerda1" id="btn_rei_b_1_andar1"></button>
+                <button class="btn_peca" id="btn_rei_b"><img src="/peças/rei_branco.png"></button>
+            </div>
+            <div class="peca" id="bispo_b_2">
+                <button class="jogadas diagonal_cima_direita7" id="btn_bispo_b_2_diagonal_cima_direita7"></button>
+                <button class="jogadas diagonal_cima_direita6" id="btn_bispo_b_2_diagonal_cima_direita6"></button>
+                <button class="jogadas diagonal_cima_direita5" id="btn_bispo_b_2_diagonal_cima_direita5"></button>
+                <button class="jogadas diagonal_cima_direita4" id="btn_bispo_b_2_diagonal_cima_direita4"></button>
+                <button class="jogadas diagonal_cima_direita3" id="btn_bispo_b_2_diagonal_cima_direita3"></button>
+                <button class="jogadas diagonal_cima_direita2" id="btn_bispo_b_2_diagonal_cima_direita2"></button>
+                <button class="jogadas diagonal_cima_direita1" id="btn_bispo_b_2_diagonal_cima_direita1"></button>
+               
+                <button class="jogadas diagonal_cima_esquerda7" id="btn_bispo_b_2_diagonal_cima_esquerda7"></button>
+                <button class="jogadas diagonal_cima_esquerda6" id="btn_bispo_b_2_diagonal_cima_esquerda6"></button>
+                <button class="jogadas diagonal_cima_esquerda5" id="btn_bispo_b_2_diagonal_cima_esquerda5"></button>
+                <button class="jogadas diagonal_cima_esquerda4" id="btn_bispo_b_2_diagonal_cima_esquerda4"></button>
+                <button class="jogadas diagonal_cima_esquerda3" id="btn_bispo_b_2_diagonal_cima_esquerda3"></button>
+                <button class="jogadas diagonal_cima_esquerda2" id="btn_bispo_b_2_diagonal_cima_esquerda2"></button>
+                <button class="jogadas diagonal_cima_esquerda1" id="btn_bispo_b_2_diagonal_cima_esquerda1"></button>
+
+                <button class="jogadas diagonal_baixo_direita7" id="btn_bispo_b_2_diagonal_baixo_direita7"></button>
+                <button class="jogadas diagonal_baixo_direita6" id="btn_bispo_b_2_diagonal_baixo_direita6"></button>
+                <button class="jogadas diagonal_baixo_direita5" id="btn_bispo_b_2_diagonal_baixo_direita5"></button>
+                <button class="jogadas diagonal_baixo_direita4" id="btn_bispo_b_2_diagonal_baixo_direita4"></button>
+                <button class="jogadas diagonal_baixo_direita3" id="btn_bispo_b_2_diagonal_baixo_direita3"></button>
+                <button class="jogadas diagonal_baixo_direita2" id="btn_bispo_b_2_diagonal_baixo_direita2"></button>
+                <button class="jogadas diagonal_baixo_direita1" id="btn_bispo_b_2_diagonal_baixo_direita1"></button>
+               
+                <button class="jogadas diagonal_baixo_esquerda7" id="btn_bispo_b_2_diagonal_baixo_esquerda7"></button>
+                <button class="jogadas diagonal_baixo_esquerda6" id="btn_bispo_b_2_diagonal_baixo_esquerda6"></button>
+                <button class="jogadas diagonal_baixo_esquerda5" id="btn_bispo_b_2_diagonal_baixo_esquerda5"></button>
+                <button class="jogadas diagonal_baixo_esquerda4" id="btn_bispo_b_2_diagonal_baixo_esquerda4"></button>
+                <button class="jogadas diagonal_baixo_esquerda3" id="btn_bispo_b_2_diagonal_baixo_esquerda3"></button>
+                <button class="jogadas diagonal_baixo_esquerda2" id="btn_bispo_b_2_diagonal_baixo_esquerda2"></button>
+                <button class="jogadas diagonal_baixo_esquerda1" id="btn_bispo_b_2_diagonal_baixo_esquerda1"></button>
+                <button class="btn_peca" id="btn_bispo_b_2"><img src="/peças/bispo_branco.png"></button>
+            </div>
+            <div class="peca" id="cavalo_b_2">
+                <button class="jogadas l_8" id="btn_cavalo_b_2_andar8"></button>
+                <button class="jogadas l_7" id="btn_cavalo_b_2_andar7"></button>
+                <button class="jogadas l_6" id="btn_cavalo_b_2_andar6"></button>
+                <button class="jogadas l_5" id="btn_cavalo_b_2_andar5"></button>
+                <button class="jogadas l_4" id="btn_cavalo_b_2_andar4"></button>
+                <button class="jogadas l_3" id="btn_cavalo_b_2_andar3"></button>
+                <button class="jogadas l_2" id="btn_cavalo_b_2_andar2"></button>
+                <button class="jogadas l_1" id="btn_cavalo_b_2_andar1"></button>
+                <button class="btn_peca" id="btn_cavalo_b_2"><img src="/peças/cavalo_branco.png"></button>
+            </div>
+            <div class="peca" id="torre_b_2">
+                <button class="jogadas frente_7" id="btn_torre_b_2_andar7"></button>
+                <button class="jogadas frente_6" id="btn_torre_b_2_andar6"></button>
+                <button class="jogadas frente_5" id="btn_torre_b_2_andar5"></button>
+                <button class="jogadas frente_4" id="btn_torre_b_2_andar4"></button>
+                <button class="jogadas frente_3" id="btn_torre_b_2_andar3"></button>
+                <button class="jogadas frente_2" id="btn_torre_b_2_andar2"></button>
+                <button class="jogadas frente_1" id="btn_torre_b_2_andar1"></button>
+
+                <button class="jogadas tras_7" id="btn_torre_b_2_andar_tras7"></button>
+                <button class="jogadas tras_6" id="btn_torre_b_2_andar_tras6"></button>
+                <button class="jogadas tras_5" id="btn_torre_b_2_andar_tras5"></button>
+                <button class="jogadas tras_4" id="btn_torre_b_2_andar_tras4"></button>
+                <button class="jogadas tras_3" id="btn_torre_b_2_andar_tras3"></button>
+                <button class="jogadas tras_2" id="btn_torre_b_2_andar_tras2"></button>
+                <button class="jogadas tras_1" id="btn_torre_b_2_andar_tras1"></button>
+
+                <button class="jogadas lado_7" id="btn_torre_b_2_andar_lado7"></button>
+                <button class="jogadas lado_6" id="btn_torre_b_2_andar_lado6"></button>
+                <button class="jogadas lado_5" id="btn_torre_b_2_andar_lado5"></button>
+                <button class="jogadas lado_4" id="btn_torre_b_2_andar_lado4"></button>
+                <button class="jogadas lado_3" id="btn_torre_b_2_andar_lado3"></button>
+                <button class="jogadas lado_2" id="btn_torre_b_2_andar_lado2"></button>
+                <button class="jogadas lado_1" id="btn_torre_b_2_andar_lado1"></button>
+
+                <button class="jogadas lado_esquerdo_7" id="btn_torre_b_2_andar_lado_esquerdo7"></button>
+                <button class="jogadas lado_esquerdo_6" id="btn_torre_b_2_andar_lado_esquerdo6"></button>
+                <button class="jogadas lado_esquerdo_5" id="btn_torre_b_2_andar_lado_esquerdo5"></button>
+                <button class="jogadas lado_esquerdo_4" id="btn_torre_b_2_andar_lado_esquerdo4"></button>
+                <button class="jogadas lado_esquerdo_3" id="btn_torre_b_2_andar_lado_esquerdo3"></button>
+                <button class="jogadas lado_esquerdo_2" id="btn_torre_b_2_andar_lado_esquerdo2"></button>
+                <button class="jogadas lado_esquerdo_1" id="btn_torre_b_2_andar_lado_esquerdo1"></button>
+                <button class="btn_peca" id="btn_torre_b_2"><img src="/peças/torre_branca.png" id="torre_branca2"></button>
+        </div>  
+    </div>
+   </div>
+
+    <div class="controls">
+        <button id="resetar">
+            <p>Começar</p>
+        </button>
+
+        <button id="cancelar">
+            <p>Cancelar</p>
+        </button>
+
+        <input type="checkbox" class="input_style" id="myCheck" onclick="myFunction()">
+        <p id="texto1" >Vez do time branco</p>
+        <p id="texto2" style="display:none; color:black;">Vez do time preto</p>
+
+    </div>
+    
+    <script src="/scripts/main.js"></script>
+    <script src="/scripts/torre.js"></script>
+    <script src="/scripts/peao.js"></script>
+    <script src="/scripts/rei.js"></script>
+    <script src="/scripts/rainha.js"></script>
+    <script src="/scripts/cavalo.js"></script>
+    <script src="/scripts/bispo.js"></script>
+    
+   <!--
+    
+    <script src="/scripts/teste.js"></script>
+   -->
+</body>
+</html>

@@ -1,0 +1,500 @@
+html{
+    overflow-y:hidden;
+    overflow-x:hidden;
+}
+body{
+    background-color: rgb(141, 77, 29);
+    /*background-image: url(/peças/mesa_txt.jpg);*/
+}
+p{
+    font-size: 20px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    color: rgb(224, 224, 224);
+}
+button{
+    position: absolute;
+    margin-top: 0;
+}
+button p{
+    color: #000;
+}
+
+.input_style{
+    width: 20px;
+    height: 20px;
+}
+
+.tabuleiro{
+    display: flex;
+    margin-left: 360px;
+}
+.casas{
+    height: 500px;
+    width: 500px;
+    background-color: rgb(0, 0, 0);
+    display: block;
+    border: 10px solid rgb(0, 0, 0);
+}
+.fileira{
+    display: flex;
+}
+.casa_branca{
+    height: 62.5px;
+    width: 62.5px;
+    background-color: rgb(224, 224, 224);
+}
+.casa_preta{
+    height: 62.5px;
+    width: 62.5px;
+    background-color: rgb(110, 141, 54);
+}
+
+.peca img{
+    height: 62.5px;
+    width: 62.5px;
+}
+.btn_peca{
+    border: none;
+    background-color: rgba(0, 0, 0, 0);
+    width: 62.5px;
+    height: 62.5px;
+    padding: 0;
+}
+
+.jogadas{
+    height: 62.5px;
+    width: 62.5px;
+    background-color: rgba(0, 255, 21, 0.537);
+    z-index: 999;
+    border: none;
+    display: none;
+}
+.comer{
+    background-color: rgba(255, 140, 0, 0.573);
+}
+
+.controls{
+    margin-left: 80px;
+}
+.controls button{
+    position: static;
+    height: 40px;
+   
+}
+.controls button p{
+    font-size: 15px;
+    margin: auto;
+}
+
+
+.tras_1{
+    margin-top: 62.5px;
+}
+.tras_2{
+    margin-top: 125px;
+}
+.tras_3{
+    margin-top: 187.5px;
+}
+.tras_4{
+    margin-top: 250px;
+}
+.tras_5{
+    margin-top: 312.5px;
+}
+.tras_6{
+    margin-top: 375px;
+}
+.tras_7{
+    margin-top: 437.5px;
+    
+}
+
+
+.frente_1{
+    margin-top: -62.5px;
+}
+.frente_2{
+    margin-top: -125px;
+}
+.frente_3{
+    margin-top: -187.5px;
+}
+.frente_4{
+    margin-top: -250px;
+}
+.frente_5{
+    margin-top: -312.5px;
+}
+.frente_6{
+    margin-top: -375px;
+}
+.frente_7{
+    margin-top: -437.5px;
+}
+
+.lado_1{
+    margin-left: 62.5px;
+    
+}
+.lado_2{
+    margin-left: 125px;
+    
+}
+.lado_3{
+    margin-left: 187.5px;
+    
+}
+.lado_4{
+    margin-left: 250px;
+    
+}
+.lado_5{
+    margin-left: 312.5px;
+    
+}
+.lado_6{
+    margin-left: 375px; 
+}
+.lado_7{
+    margin-left: 437.5px;
+    
+}
+
+.lado_esquerdo_1{
+    margin-left: -62.5px;
+}
+.lado_esquerdo_2{
+    margin-left: -125px;
+}
+.lado_esquerdo_3{
+    margin-left: -187.5px;
+}
+.lado_esquerdo_4{
+    margin-left: -250px;
+}
+.lado_esquerdo_5{
+    margin-left: -312.5px;
+}
+.lado_esquerdo_6{
+    margin-left: -375px; 
+}
+.lado_esquerdo_7{
+    margin-left: -437.5px;
+    
+}
+
+
+.l_1{
+    margin-top: -125px;
+    margin-left: -62.5px;
+}
+.l_2{
+    margin-top: -125px;
+    margin-left: 62.5px;
+}
+.l_3{
+    margin-top: -62.5px;
+    margin-left: 125px;
+}
+.l_4{
+    margin-top: 62.5px;
+    margin-left: 125px;
+}
+.l_5{
+    margin-top: 125px;
+    margin-left: 62.5px;
+}
+.l_6{
+    margin-top: 125px;
+    margin-left: -62.5px;
+}
+.l_7{
+    margin-top: 62.5px;
+    margin-left: -125px;
+}
+.l_8{
+    margin-top: -62.5px;
+    margin-left: -125px;
+}
+
+.diagonal_cima_direita1{
+    margin-top: -62.5px;
+    margin-left: 62.5px;
+    
+}
+.diagonal_cima_direita2{
+    margin-top: -125px;
+    margin-left: 125px;
+    
+}
+.diagonal_cima_direita3{
+    margin-top: -187.5px;
+    margin-left: 187.5px;
+    
+}
+.diagonal_cima_direita4{
+    margin-top: -250px;
+    margin-left: 250px;
+    
+}
+.diagonal_cima_direita5{
+    margin-top: -312.5px;
+    margin-left: 312.5px;
+    
+}
+.diagonal_cima_direita6{
+    margin-top: -375px;
+    margin-left: 375px;
+    
+}
+.diagonal_cima_direita7{
+    margin-top: -437.5px;
+    margin-left: 437.5px;
+    
+}
+
+.diagonal_cima_esquerda1{
+    margin-top: -62.5px;
+    margin-left: -62.5px;
+    
+}
+.diagonal_cima_esquerda2{
+    margin-top: -125px;
+    margin-left: -125px;
+    
+}
+.diagonal_cima_esquerda3{
+    margin-top: -187.5px;
+    margin-left: -187.5px;
+    
+}
+.diagonal_cima_esquerda4{
+    margin-top: -250px;
+    margin-left: -250px;
+    
+}
+.diagonal_cima_esquerda5{
+    margin-top: -312.5px;
+    margin-left: -312.5px;
+    
+}
+.diagonal_cima_esquerda6{
+    margin-top: -375px;
+    margin-left: -375px;
+    
+}
+.diagonal_cima_esquerda7{
+    margin-top: -437.5px;
+    margin-left: -437.5px;
+    
+}
+
+.diagonal_baixo_direita1{
+    margin-top: 62.5px;
+    margin-left: 62.5px;
+    
+}
+.diagonal_baixo_direita2{
+    margin-top: 125px;
+    margin-left: 125px;
+    
+}
+.diagonal_baixo_direita3{
+    margin-top: 187.5px;
+    margin-left: 187.5px;
+    
+}
+.diagonal_baixo_direita4{
+    margin-top: 250px;
+    margin-left: 250px;
+
+}
+.diagonal_baixo_direita5{
+    margin-top: 312.5px;
+    margin-left: 312.5px;
+
+}
+.diagonal_baixo_direita6{
+    margin-top: 375px;
+    margin-left: 375px;
+
+}
+.diagonal_baixo_direita7{
+    margin-top: 437.5px;
+    margin-left: 437.5px;
+
+}
+
+.diagonal_baixo_esquerda1{
+    margin-top: 62.5px;
+    margin-left: -62.5px;
+
+}
+.diagonal_baixo_esquerda2{
+    margin-top: 125px;
+    margin-left: -125px;
+
+}
+.diagonal_baixo_esquerda3{
+    margin-top: 187.5px;
+    margin-left: -187.5px;
+
+}
+.diagonal_baixo_esquerda4{
+    margin-top: 250px;
+    margin-left: -250px;
+
+}
+.diagonal_baixo_esquerda5{
+    margin-top: 312.5px;
+    margin-left: -312.5px;
+
+}
+.diagonal_baixo_esquerda6{
+    margin-top: 375px;
+    margin-left: -375px;
+  
+}
+.diagonal_baixo_esquerda7{
+    margin-top: 437.5px;
+    margin-left: -437.5px;
+ 
+}
+
+
+
+.indicador_letras{
+    display: flex;
+}
+.indicador_letras p{
+    padding: 0 26px 0 26px;
+}
+.indicador_numeros p{
+    padding: 10px 20px 10px 0;
+}
+
+
+.torre_branca{
+    margin: -100px 0;
+}
+
+
+
+#torre_p_1{
+    position: absolute;
+}
+#cavalo_p_1{
+    position: absolute;
+}
+#bispo_p_1{
+    position: absolute;
+}
+#rainha_p{
+    position: absolute;
+}
+#rei_p{
+    position: absolute;
+}
+#bispo_p_2{
+    position: absolute;
+}
+#cavalo_p_2{
+    position: absolute;
+}
+#torre_p_2{
+    position: absolute;
+}
+#peao_p_1{
+    position: absolute;
+}
+#peao_p_2{
+    position: absolute;
+}
+#peao_p_3{
+    position: absolute;
+}
+#peao_p_4{
+    position: absolute;
+}
+#peao_p_5{
+    position: absolute;
+}
+#peao_p_6{
+    position: absolute;
+}
+#peao_p_7{
+    position: absolute;
+}
+#peao_p_8{
+    position: absolute;
+}
+
+
+
+
+#torre_b_1{
+    position: absolute;
+}
+#cavalo_b_1{
+    position: absolute;
+}
+#bispo_b_1{
+    position: absolute;
+}
+#rainha_b{
+    position: absolute;
+}
+#rei_b{
+    position: absolute;
+}
+#bispo_b_2{
+    position: absolute;
+}
+#cavalo_b_2{
+    position: absolute;
+}
+#torre_b_2{
+    position: absolute;
+}
+#peao_b_1{
+    position: absolute;
+}
+#peao_b_2{
+    position: absolute;
+}
+#peao_b_3{
+    position: absolute;
+}
+#peao_b_4{
+    position: absolute;
+}
+#peao_b_5{
+    position: absolute;
+}
+#peao_b_6{
+    position: absolute;
+}
+#peao_b_7{
+    position: absolute;
+}
+#peao_b_8{
+    position: absolute;
+}
+
+
+/* The animation code */
+@keyframes piscar {
+    from {opacity: 1;}
+    to {opacity: .2;}
+  }
+  
+  /* The element to apply the animation to */
+.pedrao {
+    width: 100px;
+    height: 100px;
+    animation: mymove 5s infinite;
+    animation-name: piscar;
+    animation-duration: 3s;
+  }
